@@ -5,6 +5,7 @@ import { BookList } from './Components/BookList'
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
+import { App } from './App';
 
 firebase.initializeApp({
 		type: import.meta.env.VITE_TYPE,
@@ -19,9 +20,8 @@ firebase.initializeApp({
 		client_x509_cert_url: import.meta.env.VITE_CLIENT_X509_CERT_URL
 });
 
-
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-		<BookList />
+		<App />
   </React.StrictMode>,
 )
