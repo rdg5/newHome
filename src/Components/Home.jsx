@@ -3,9 +3,9 @@ import pp from '../assets/pp.jpeg'
 export const Home = () => {
 	
 	return(
-		<>
+		<div className='flex flex-col space-y-3'>
 		<h1 className = "text-3xl font-bold underline">Hi, this is my internet thing</h1>
-		<img src={pp}></img>
-		</>	
+		<h2 className='font-bold'>You can find here stuff about me, books I've read and contact</h2>
+		</div>	
 	)
 }
