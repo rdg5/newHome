@@ -3,7 +3,7 @@ import React from 'react';
 export const  Contact = () => {
   return (
     <div className="flex pt-8 pl-8">
-      <div className="flex flex-col-reverse pb-7">
+      <div className="flex flex-colpb-7">
         <ul>
           <li className="text-teal-500">
             github:
