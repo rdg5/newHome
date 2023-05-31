@@ -25,18 +25,18 @@ export const BookList = () => {
   const filteredBooks = selectedYear ? books.filter((book) => book.year === selectedYear) : books;
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen pr-7">
+    <div className="flex flex-col items-center justify-center h-5/6 pr-7">
       <h1 className="mb-4 text-4xl font-bold leading-none text-gray-900 md:text-3xl dark:text-white pt-10">
         Books that I have read in the last years
       </h1>
       <div className="flex">
         <div className="flex flex-col items-stretch pt-7 space-y-3">
           {years.map((year) => (
-            <button className="btn-year" key={year} onClick={() => handleYearClick(year)}>
+            <button type="button" className="btn-year" key={year} onClick={() => handleYearClick(year)}>
               {year}
             </button>
           ))}
-          <button className="btn-reset" key="reset" onClick={() => setSelectedYear('')}>
+          <button type="button" className="btn-reset" key="reset" onClick={() => setSelectedYear('')}>
             Reset
           </button>
         </div>
@@ -44,7 +44,10 @@ export const BookList = () => {
           <ul className="max-w-md space-y-1 text-orange-300 list-none list-inside">
             {filteredBooks.map((book) => (
               <li className="text-xs" key={book.title}>
-                {book.author} - {book.title}
+                {book.author}
+                {' '}
+                -
+                {book.title}
               </li>
             ))}
           </ul>
@@ -52,5 +55,4 @@ export const BookList = () => {
       </div>
     </div>
   );
-};
-
+}
