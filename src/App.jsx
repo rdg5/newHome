@@ -1,9 +1,9 @@
-import { BookList } from "./Components/BookList"
+import { BookList } from "./Components/Pages/BookList"
 import { createRouter } from "@swan-io/chicane";
 import { match } from "ts-pattern";
-import Home from './Components/Home'
-import { Contact } from './Components/Contact'
-import { Whoami } from './Components/Whoami'
+import { Home } from './Components/Pages/Home'
+import { Contact } from './Components/Pages/Contact'
+import { Whoami } from './Components/Pages/Whoami'
 
 const Router = createRouter({
   Home: "/",

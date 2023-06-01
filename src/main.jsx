@@ -5,7 +5,7 @@ import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
 import { App } from './App';
-import Navbar from './Components/Navbar';
+import { Navbar } from './Components/Navbar';
 
 firebase.initializeApp({
 		type: import.meta.env.VITE_TYPE,

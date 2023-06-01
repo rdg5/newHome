@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { YearButton } from '../Buttons/YearButton';
+import { ResetButton } from '../Buttons/ResetButton';
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/firestore';
 
@@ -9,12 +11,18 @@ export const BookList = () => {
   const [selectedYear, setSelectedYear] = useState('');
 
   useEffect(() => {
-    // Fetch all books from Firestore
-    db.collection('books').get().then((queriedBooks) => {
-      const data = queriedBooks.docs.map((book) => book.data()).sort((a, b) => b.year - a.year);
-      setBooks(data);
-    });
-  }, []);
+    const fetchBooks = async () => {
+      try {
+        const queriedBooks = await db.collection('books').get();
+        const data = queriedBooks.docs.map((book) => book.data()).sort((a, b) => b.year - a.year);
+        setBooks(data);
+      } catch (error) {
+        console.error('Error fetching books:', error);
+      }
+    };
+
+    fetchBooks();
+  }, [db]);
 
   const years = ['2023', '2022', '2021', '2020'];
 
@@ -30,24 +38,17 @@ export const BookList = () => {
         Books that I have read in the last years
       </h1>
       <div className="flex">
-        <div className="flex flex-col items-stretch pt-7 space-y-3">
+        <div className="flex flex-col justify-start items-stretch pt-7 space-y-3">
           {years.map((year) => (
-            <button type="button" className="btn-year" key={year} onClick={() => handleYearClick(year)}>
-              {year}
-            </button>
+            <YearButton key={year} year={year} onClick={handleYearClick} selected={selectedYear === year} />
           ))}
-          <button type="button" className="btn-reset" key="reset" onClick={() => setSelectedYear('')}>
-            Reset
-          </button>
+          <ResetButton onClick={() => setSelectedYear('')} />
         </div>
         <div className="flex flex-col overflow-y-auto pt-7 pl-7">
           <ul className="max-w-md space-y-1 text-orange-300 list-none list-inside">
             {filteredBooks.map((book) => (
               <li className="text-xs" key={book.title}>
-                {book.author}
-                {' '}
-                -
-                {book.title}
+                {book.author} - {book.title}
               </li>
             ))}
           </ul>
@@ -55,4 +56,4 @@ export const BookList = () => {
       </div>
     </div>
   );
-}
+};
