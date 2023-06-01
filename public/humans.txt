@@ -1,0 +1,29 @@
+
+/* TEAM */
+
+                            
+Your title: Sandor Vass
+
+                            
+Site: sandorvass.xyz
+
+                            
+Twitter: not_rdg
+
+                            
+Location: Budapest, Hungary
+                            
+/* SITE */
+
+                            
+Last update: 2023.06.01 
+
+                            
+Standards: HTML5, CSS3, ES6
+
+                            
+Components: Chicane
+
+                            
+Software: React
+   
