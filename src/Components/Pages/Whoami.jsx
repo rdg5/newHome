@@ -16,7 +16,7 @@ export const Whoami = () => {
 				</p>
 				<p className="text-xl text-gray-900 pt-7"> 
 					 <a href="https://qwik.builder.io" className="underline decoration-orange-600"> qwik </a>  on the frontend with 
-					<a href="https://hono.dev" className="underline decoration-orange-600"> hono</a> backend
+					<a href="https://hono.dev" className="underline decoration-orange-100"> hono</a> backend, but this might change
 				</p>
      </div>
 	</div>
