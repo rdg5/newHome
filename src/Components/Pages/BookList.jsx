@@ -24,7 +24,7 @@ export const BookList = () => {
     fetchBooks();
   }, [db]);
 
-  const years = ['2023', '2022', '2021', '2020'];
+  const years = ['2024', '2023', '2022', '2021', '2020'];
 
   const handleYearClick = (year) => {
     setSelectedYear(year);
