@@ -1,0 +1,24 @@
+baseURL = "https://www.sandorvass.xyz/"
+languageCode = "en"
+title = "S.V."
+
+[params]
+  description = "Sandor Vass - personal site"
+
+[menu]
+  [[menu.main]]
+    name = "Who am I?"
+    url = "/whoami/"
+    weight = 1
+  [[menu.main]]
+    name = "Books"
+    url = "/books/"
+    weight = 2
+  [[menu.main]]
+    name = "Wiki"
+    url = "https://wiki.sandorvass.xyz"
+    weight = 3
+  [[menu.main]]
+    name = "Contact"
+    url = "/contact/"
+    weight = 4
