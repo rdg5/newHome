@@ -1,0 +1,8 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="/vite.svg">
+<link type="text/plain" rel="author" href="/humans.txt">
+<script defer src="https://cloud.umami.is/script.js" data-website-id="3cf8a72d-cb14-4c3e-91a5-da69d92c3612"></script>
+{{ $style := resources.Get "css/style.css" }}
+<link rel="stylesheet" href="{{ $style.RelPermalink }}">
+<title>{{ if .IsHome }}S.V.{{ else }}{{ .Title }} | S.V.{{ end }}</title>
