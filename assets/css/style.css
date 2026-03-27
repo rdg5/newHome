@@ -10,6 +10,9 @@ body {
   background-color: #475569; /* slate-600 */
   color: #e2e8f0; /* slate-200 */
   line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Nav */
@@ -27,6 +30,7 @@ nav {
   color: #cbd5e1; /* slate-300 */
   text-decoration: none;
   font-weight: 500;
+  transition: color 0.15s, background-color 0.15s;
 }
 
 .nav-link:hover,
@@ -39,7 +43,9 @@ nav {
 
 /* Main content */
 main {
+  flex: 1;
   max-width: 48rem;
+  width: 100%;
   margin: 0 auto;
   padding: 2rem 1rem;
 }
@@ -196,6 +202,8 @@ footer {
   max-width: 48rem;
   margin: 0 auto;
   padding: 2rem 1rem;
+  font-size: 0.875rem;
+  color: #94a3b8; /* slate-400 */
 }
 
 footer hr {
@@ -204,10 +212,13 @@ footer hr {
   margin-bottom: 0.75rem;
 }
 
+.footer-sep {
+  margin: 0 0.375rem;
+}
+
 footer a {
   color: #94a3b8; /* slate-400 */
   text-decoration: none;
-  font-size: 0.875rem;
   transition: color 0.15s;
 }
 
