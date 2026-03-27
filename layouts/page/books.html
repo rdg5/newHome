@@ -1,0 +1,30 @@
+{{ define "main" }}
+<h1 class="books-header">Books that I have read in the last years</h1>
+<div class="books-layout">
+  <div class="year-filters">
+    {{ $years := slice "2026" "2025" "2024" "2023" "2022" "2021" "2020" }}
+    {{ range $years }}
+      <button class="btn-year" data-year="{{ . }}" onclick="filterBooks('{{ . }}')">{{ . }}</button>
+    {{ end }}
+    <button class="btn-reset" onclick="filterBooks('')">Reset</button>
+  </div>
+  <div>
+    <ul class="book-list">
+      {{ range sort .Site.Data.books "year" "desc" }}
+        <li data-year="{{ .year }}">{{ .author }} - {{ .title }}</li>
+      {{ end }}
+    </ul>
+  </div>
+</div>
+
+<script>
+function filterBooks(year) {
+  document.querySelectorAll('.btn-year').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.year === year);
+  });
+  document.querySelectorAll('.book-list li').forEach(li => {
+    li.style.display = (!year || li.dataset.year === year) ? '' : 'none';
+  });
+}
+</script>
+{{ end }}
