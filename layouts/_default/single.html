@@ -1,0 +1,33 @@
+{{ define "main" }}
+
+{{ if eq .RelPermalink "/whoami/" }}
+<div class="whoami">
+  <div class="whoami-content">
+    <p>
+      I'm sanyi, currently based in Budapest. I'm a software developer at
+      <a href="https://bobcatscoding.com" class="link-orange">Bobcats coding</a>.<br>
+      Outside of work, I like to <a href="/books/" class="link-teal">read</a>
+      and to <a class="link-light">cook</a>.
+    </p>
+    <p>Currently I enjoy working with the following things:</p>
+    <p>
+      <a href="https://qwik.builder.io" class="link-orange">qwik</a> on the frontend with
+      <a href="https://hono.dev" class="link-light">hono</a> backend, but this might change
+    </p>
+  </div>
+</div>
+
+{{ else if eq .RelPermalink "/contact/" }}
+<ul class="contact-list">
+  <li>github: <a href="https://github.com/rdg5" target="_blank" rel="noopener">rdg5</a></li>
+  <li>linkedin: <a href="https://www.linkedin.com/in/sandorvass" target="_blank" rel="noopener">linkedin</a></li>
+  <li>twitter: <a href="https://twitter.com/not_rdg" target="_blank" rel="noopener">@not_rdg</a></li>
+</ul>
+
+{{ else }}
+<div>
+  {{ .Content }}
+</div>
+{{ end }}
+
+{{ end }}
