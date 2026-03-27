@@ -1,0 +1,9 @@
+<nav>
+  {{ range .Site.Menus.main }}
+    <a href="{{ .URL }}"
+       {{ if strings.HasPrefix .URL "http" }}target="_blank" rel="noopener"{{ end }}
+       {{ if eq $.RelPermalink .URL }}class="nav-link active"{{ else }}class="nav-link"{{ end }}>
+      {{ .Name }}
+    </a>
+  {{ end }}
+</nav>
