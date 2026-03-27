@@ -10,7 +10,7 @@
   </div>
   <div>
     <ul class="book-list">
-      {{ range sort .Site.Data.books "year" "desc" }}
+      {{ range sort hugo.Data.books "year" "desc" }}
         <li data-year="{{ .year }}">{{ .author }} - {{ .title }}</li>
       {{ end }}
     </ul>

@@ -1,6 +1,7 @@
 baseURL = "https://www.sandorvass.xyz/"
 languageCode = "en"
 title = "S.V."
+disableKinds = ["taxonomy", "term"]
 
 [params]
   description = "Sandor Vass - personal site"
