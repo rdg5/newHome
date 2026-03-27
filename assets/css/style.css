@@ -194,7 +194,19 @@ main {
 
 .book-list li {
   font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+.year-heading {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #fff;
+  margin-top: 1rem;
   margin-bottom: 0.25rem;
+}
+
+.year-heading:first-child {
+  margin-top: 0;
 }
 
 /* Footer */
@@ -224,6 +236,24 @@ footer a {
 
 footer a:hover {
   color: #e2e8f0; /* slate-200 */
+}
+
+/* 404 */
+.error-page {
+  text-align: center;
+  padding-top: 4rem;
+}
+
+.error-page h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  color: #f97316; /* orange-500 */
+  margin-bottom: 0.5rem;
+}
+
+.error-page p {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
 }
 
 /* Responsive */
