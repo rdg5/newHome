@@ -1,6 +1,6 @@
 /* TEAM */
 
-Your title: Sandor Vass
+Sandor Vass
 
 Site: sandorvass.xyz
 
