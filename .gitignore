@@ -3,20 +3,13 @@ public/
 resources/_gen/
 .hugo_build.lock
 
-# Node (Playwright tests)
+# Node
 node_modules/
 test-results/
 playwright-report/
 
-# Editor
-.vscode/*
-!.vscode/extensions.json
-.idea
+# OS / Editor
 .DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
 *.sw?
 
 # Env
