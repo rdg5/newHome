@@ -1,0 +1,11 @@
+{{ define "main" }}
+<h1 class="books-header">Stuff I have built</h1>
+<ul class="project-list">
+  {{ range hugo.Data.projects }}
+    <li>
+      <a class="link-orange" href="{{ .url }}" target="_blank" rel="noopener">{{ .name }}</a>
+      <p>{{ .blurb }}</p>
+    </li>
+  {{ end }}
+</ul>
+{{ end }}

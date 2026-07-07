@@ -209,6 +209,26 @@ main {
   margin-top: 0;
 }
 
+/* Projects page */
+.project-list {
+  list-style: none;
+  padding-top: 1.75rem;
+}
+
+.project-list li {
+  margin-bottom: 1.5rem;
+}
+
+.project-list a {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.project-list p {
+  color: #cbd5e1; /* slate-300 */
+  margin-top: 0.25rem;
+}
+
 /* Footer */
 footer {
   max-width: 48rem;
